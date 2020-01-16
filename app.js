@@ -14,7 +14,8 @@ function timer(seconds) {
     displayTimeLeft(seconds);
     displayEndTime(then);
     getBack.style.opacity = '1';
-    getBack.style.transform = 'scale(1)'
+    getBack.style.transform = 'scale(1)';
+    timerDisplay.style.color = 'white';
 
     countdown = setInterval(() => {
         const secondsLeft = Math.round((then - Date.now()) / 1000);
@@ -32,6 +33,7 @@ function displayTimeLeft(seconds) {
     const remainderSeconds = seconds%60;
     const display = `${minutes}:${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`;
     timerDisplay.innerHTML = display;
+    if(hours === 0 && minutes === 0 && remainderSeconds < 25) timerDisplay.style.color = 'red';
     document.title = display;
 }
 
@@ -66,6 +68,7 @@ function stopTimer(){
     getBack.style.opacity = '0';
     getBack.style.transform = 'scale(0.5)'
     document.title = 'Countdown Clock';
+    timerDisplay.style.color = 'white';
 }
 
 getBack.addEventListener('click',stopTimer)
