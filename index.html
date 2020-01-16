@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Countdown Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <button data-time="30" class='button'>30 SEC</button>
+        <button data-time="300" class='button'>WORK 5</button>
+        <button data-time="600" class='button'>COFFEE</button>
+        <button data-time="900" class='button'>15 MIN</button>
+        <button data-time="1800" class='button'>LUNCH</button>
+        <form name="customForm" id="custom">
+            <input type="number" min='0' name="minutes" placeholder="Add Minutes">
+            <div class='arrows'>
+                <img data-count='1' src="./img/up.png" alt="">
+                <img data-count='-1'src="./img/down.png" alt="">
+            </div>
+        </form>
+    </div>
+    <div class="display">
+       <h1 class='display-time-left'>00:00</h1>
+       <p class="display-end-time">This Is The Working Hour</p>
+       <div class='getBack'>GET BACK</div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
