@@ -38,11 +38,11 @@ button, input {
   min-height: 25px;
   color: #0f4c83;
   font-weight: 700;
-  border: 1px solid #0f4c83;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   font-size: 14px;
   outline: none;
+  border: 5px solid #0f4c83;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -80,10 +80,6 @@ input[type=number]::-webkit-outer-spin-button {
   cursor: pointer;
 }
 
-form {
-  position: relative;
-}
-
 .arrows {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,11 +90,15 @@ form {
           flex-direction: column;
   cursor: pointer;
   height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-right: 5px solid #0f4c83;
 }
 
 img {
   height: 5vh;
-  max-height: 25px;
+  max-height: 20px;
   min-height: 12.5px;
 }
 
@@ -106,6 +106,7 @@ img {
   width: 100px;
   font-size: 13px;
   text-align: center;
+  border-right: 0px;
 }
 
 @media (max-height: 300px) {
@@ -130,6 +131,7 @@ img {
   font-size: 6rem;
   height: 80vh;
   font-family: 'Lato', sans-serif;
+  padding-top: 20vh;
 }
 
 @media (max-width: 700px) {
@@ -144,9 +146,14 @@ img {
   }
   .button {
     font-size: 12px;
+    border: 0px;
   }
   .input {
     font-size: 12px;
+    border: 0px;
+  }
+  .arrows {
+    border: 0px;
   }
 }
 
@@ -162,6 +169,9 @@ h1 {
     margin-top: 1rem;
     padding-top: 0px;
   }
+  .display {
+    padding-top: 10px;
+  }
 }
 
 p {
@@ -170,6 +180,7 @@ p {
   font-size: 20px;
   color: #a1dca8;
   margin-top: 0px;
+  padding-bottom: 20px;
 }
 
 #custom {
