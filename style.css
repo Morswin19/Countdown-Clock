@@ -7,6 +7,8 @@ html {
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  margin: 0px;
+  padding: 0px;
 }
 
 *::-moz-selection {
@@ -102,7 +104,7 @@ img {
 
 #custom > input {
   width: 100px;
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
 }
 
@@ -133,6 +135,18 @@ img {
 @media (max-width: 700px) {
   .display {
     font-size: 5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .display {
+    font-size: 4rem;
+  }
+  .button {
+    font-size: 12px;
+  }
+  .input {
+    font-size: 12px;
   }
 }
 

@@ -4,6 +4,8 @@ html
 
 *, *:before, *:after
     box-sizing: inherit
+    margin: 0px
+    padding: 0px
 
 *::selection
     background: rgba(0,0,0,0)
@@ -59,7 +61,7 @@ img
 
 #custom > input
     width: 100px
-    font-size: 14px
+    font-size: 13px
     text-align: center
 
 @media (max-height: 300px)
@@ -79,6 +81,14 @@ img
 @media (max-width: 700px)
     .display
         font-size: 5rem
+
+@media (max-width: 450px)
+    .display
+        font-size: 4rem
+    .button
+        font-size: 12px
+    .input
+        font-size: 12px
 
 h1
     padding-top: 50px
