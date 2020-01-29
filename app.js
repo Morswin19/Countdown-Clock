@@ -31,10 +31,21 @@ function displayTimeLeft(seconds) {
     const hours = Math.floor(seconds / 3600)
     const minutes = Math.floor((seconds - hours*3600) / 60);
     const remainderSeconds = seconds%60;
-    const display = `${minutes}:${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`;
+    let display;
+    hours >= 1 ? (display = `${hours}:${minutes >= 10 ? minutes : `0${minutes}`}:${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`)
+    : 
+    minutes >=1 ? (display = `${minutes}:${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`) : (display = `${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`);
+    ;
     timerDisplay.innerHTML = display;
     if(hours === 0 && minutes === 0 && remainderSeconds < 25) timerDisplay.style.color = 'red';
     document.title = display;
+    if(display == 00){
+        timerDisplay.innerHTML = `TIME'S UP`
+        endTime.textContent = 'GET TO WORK YOU LAZY BASTARD'
+    }
+    // if(hours >= 1){
+    //     timerDisplay.style.fontSize = '80px';
+    // }
 }
 
 function displayEndTime(timestamp) {
